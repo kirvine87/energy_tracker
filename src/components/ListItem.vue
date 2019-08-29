@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'list-item',
-  props: ['energy'],
+  props: ['energy']
 }
 </script>
 

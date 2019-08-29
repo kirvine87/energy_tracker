@@ -3,12 +3,14 @@
     <h1>Energy</h1>
     <div class="">
       <energies-list :energies="energies"></energies-list>
+      <details-chart :energies="energies"></details-chart>
     </div>
   </div>
 </template>
 
 <script>
 import EnergiesList from './components/EnergiesList.vue'
+import DetailsChart from './components/DetailsChart.vue'
 export default {
   name: 'app',
   data() {
@@ -28,11 +30,10 @@ export default {
     })
   },
   components: {
-    "energies-list": EnergiesList
+    "energies-list": EnergiesList,
+    "details-chart": DetailsChart
   },
-  computed: {
 
-  },
 }
 </script>
 

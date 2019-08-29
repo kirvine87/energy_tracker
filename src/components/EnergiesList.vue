@@ -13,7 +13,7 @@ export default {
   props: ['energies'],
   components: {
     "list-item": ListItem
-  },
+  }
 }
 </script>
 
