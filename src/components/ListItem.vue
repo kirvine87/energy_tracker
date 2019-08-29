@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-      <li>hi</li>
+      <li>{{energy.fuel}}: {{energy.perc}}%</li>
   </div>
 
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'list-item',
-  props: ['energy']
+  props: ['energy'],
 }
 </script>
 

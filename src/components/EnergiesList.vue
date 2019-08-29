@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <ul>
-      <list-item></list-item>
+      <list-item v-for="(energy, index) in energies" :energy="energy" :key="index"></list-item>
     </ul>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   props: ['energies'],
   components: {
     "list-item": ListItem
-  }
+  },
 }
 </script>
 

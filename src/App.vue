@@ -2,7 +2,7 @@
   <div class="">
     <h1>Energy</h1>
     <div class="">
-      <energies-list></energies-list>
+      <energies-list :energies="energies"></energies-list>
     </div>
   </div>
 </template>
@@ -13,17 +13,26 @@ export default {
   name: 'app',
   data() {
     return {
-      energies: {}
+      energies: {},
+      from: {},
+      to: {}
     }
   },
   mounted() {
     fetch('https://api.carbonintensity.org.uk/generation')
     .then(res => res.json())
-    .then(data => this.energies = data)
+    .then(data => {
+      this.energies = data.data.generationmix
+      this.from = data.data.from
+      this.to = data.data.to
+    })
   },
   components: {
     "energies-list": EnergiesList
-  }
+  },
+  computed: {
+
+  },
 }
 </script>
 
