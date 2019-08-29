@@ -3,7 +3,7 @@
     <h1>Energy</h1>
     <div class="">
       <energies-list :energies="energies"></energies-list>
-      <details-chart :energies="energies"></details-chart>
+      <details-chart v-if="energies" :energies="energies"></details-chart>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   name: 'app',
   data() {
     return {
-      energies: {},
+      energies: null,
       from: {},
       to: {}
     }
