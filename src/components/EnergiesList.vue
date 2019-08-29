@@ -1,14 +1,19 @@
 <template lang="html">
   <div class="">
     <ul>
-      <p>Hi im text</p>
+      <list-item></list-item>
     </ul>
   </div>
 </template>
 
 <script>
+import ListItem from './ListItem.vue'
 export default {
-  name: 'energies-list'
+  name: 'energies-list',
+  props: ['energies'],
+  components: {
+    "list-item": ListItem
+  }
 }
 </script>
 

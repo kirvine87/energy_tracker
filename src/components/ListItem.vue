@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="">
-    <ul>
-      <list-component></list-componenet>
-    </ul>
+      <li>hi</li>
   </div>
 
 </template>
 
 <script>
 export default {
+  name: 'list-item',
+  props: ['energy']
 }
 </script>
 
